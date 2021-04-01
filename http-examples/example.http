@@ -1,0 +1,23 @@
+# -*- mode: restclient -*-
+
+### POST json
+POST http://localhost:8080
+Content-Type: application/json
+
+{
+  "record": {
+    "value": "TGV0J3MgR28gIzEK"
+  }
+}
+
+### you should expect back some json with the offset number e.g. {"offset": 0}
+
+### GET that json back
+GET http://localhost:8080
+Content-Type: application/json
+
+{
+  "offset": 0
+}
+
+### you should expect back some json with the value and offset number e.g. {"value": "TGV0J3MgR28gIzEK", "offset": 0}
